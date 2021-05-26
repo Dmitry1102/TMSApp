@@ -49,7 +49,23 @@ class Main: AppCompatActivity() {
         fun ouputInfo(list: List<Employee>){
             list.iterator().forEach {
                 if(it is Boss ){
-                    if()
+                    println("${boss1.name} + ${boss1.salary} + 8 persons")
+                    println("${boss2.name} + ${boss2.salary} + 8 persons")
+                }
+                if (it is Manager){
+                    println("${boss1.managersOfFirst.get(0).name} + ${boss1.managersOfFirst.get(0).salary} + 3 persons")
+                    println("${boss1.managersOfFirst.get(1).name} + ${boss1.managersOfFirst.get(1).salary} + 3 persons")
+                    println("${boss2.managersOfSecond.get(0).name} + ${boss2.managersOfSecond.get(0).salary} + 3 persons")
+                    println("${boss2.managersOfSecond.get(0).name} + ${boss2.managersOfSecond.get(0).salary} + 3 persons")
+                }
+                if(it is Worker){
+                    println("${ boss1.managersOfFirst.get(0).workersOfFirst.get(0).name}" +
+                            "${ boss1.managersOfFirst.get(0).workersOfFirst.get(0).salary}")
+                    it.work()
+
+
+
+
 
                 }
 
