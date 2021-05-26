@@ -1,6 +1,6 @@
 package com.tms.app.homework2
 
-object Singleton {
+object SingletonOutput {
     private fun initCar(): List<Car>{
         return listOf(
             Car("Mazda", "black", 3f,"AGAG235325"),
