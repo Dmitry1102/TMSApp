@@ -12,7 +12,7 @@ class Main: AppCompatActivity() {
         var elephant = Elephant(23.5,"Manny")
         var dog = Dog(30.2,"Jack")
 
-        println("Name ${dog.name} + ${Animal.countTime(dog.speed)}")
+        println("Name ${dog.name} + ${dog.countTime()}")
 
     }
 }
