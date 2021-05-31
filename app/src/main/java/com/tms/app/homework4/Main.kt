@@ -15,9 +15,6 @@ class Main: AppCompatActivity() {
         val boss1 = Boss("Jack","12000$")
         val boss2 = Boss("Dean","11000$")
 
-        fun countWorkers(){
-
-        }
 
         val list = listOf<Employee>(
             boss1,
@@ -47,7 +44,7 @@ class Main: AppCompatActivity() {
         )
 
         fun ouputInfo(list: List<Employee>){
-            list.iterator().forEach {
+            list.forEach {
                 if(it is Boss ){
                     println("${boss1.name} + ${boss1.salary} + 8 persons")
                     println("${boss2.name} + ${boss2.salary} + 8 persons")

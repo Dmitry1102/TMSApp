@@ -14,7 +14,7 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val intent = Intent(this, Homework6Activity::class.java)
-        startActivity(intent)
+
+        startActivity(Intent(this, Homework6Activity::class.java))
     }
 }

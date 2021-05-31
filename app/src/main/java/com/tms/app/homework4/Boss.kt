@@ -1,6 +1,6 @@
 package com.tms.app.homework4
 
-class Boss(var name: String, var salary: String) : Employee(name, salary) {
+class Boss( name: String,  salary: String) : Employee(name, salary, ) {
 
     val managersOfFirst = listOf<Manager>(
         Manager("Clint", "2500$"),
