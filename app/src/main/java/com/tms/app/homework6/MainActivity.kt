@@ -12,9 +12,9 @@ class MainActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_homework6)
 
 
-        startActivity(Intent(this, Homework6Activity::class.java))
+        //startActivity(Intent(this, Homework6Activity::class.java))
     }
 }
