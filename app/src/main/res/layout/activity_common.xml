@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/homework_2"
+        android:layout_width="183dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/Homework2"
+        android:background="@color/purple_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homework_4"
+        android:layout_width="183dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="260dp"
+        android:background="@color/purple_700"
+        android:text="@string/Homework4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homework_3"
+        android:layout_width="183dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="144dp"
+        android:background="@color/purple_700"
+        android:text="@string/Homework3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homework_6"
+        android:layout_width="183dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="372dp"
+        android:background="@color/purple_700"
+        android:text="@string/Homework6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homework_7"
+        android:layout_width="183dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="476dp"
+        android:background="@color/purple_700"
+        android:text="@string/Homework7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

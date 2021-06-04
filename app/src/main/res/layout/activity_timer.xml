@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/timer_show"
+        android:text="10"
+        android:paddingStart="35dp"
+        android:paddingTop="15dp"
+        android:layout_width="85dp"
+        android:layout_height="51dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200dp"
+        android:background="@color/color_timer"/>
+
+    <Button
+        android:id="@+id/timer_button"
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/color_timer"
+        android:text="@string/click" />
+
+
+</FrameLayout>
