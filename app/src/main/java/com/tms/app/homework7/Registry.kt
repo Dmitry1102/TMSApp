@@ -13,16 +13,16 @@ class Registry : AppCompatActivity() {
 
     private lateinit var click:Button
     private lateinit var textView: TextView
-    lateinit var textLogin: TextView
-    lateinit var textPass: TextView
-    private lateinit var editLog: EditText
-    private lateinit var editPass: EditText
+    private lateinit var textLogin: TextView
+    private lateinit var textPass: TextView
+    lateinit var editLog: EditText
+    lateinit var editPass: EditText
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_timer)
-
+        
         click = findViewById(R.id.timer_button)
         textView = findViewById(R.id.timer_show)
         textLogin = findViewById(R.id.log_view)
@@ -39,7 +39,10 @@ class Registry : AppCompatActivity() {
             }else{
                 click.text = "Enter"
                 click.setOnClickListener(){
-                    startActivity(Intent(this,Information::class.java))
+                    startActivity(Intent(this,Information::class.java).apply {
+                        putExtra(TEXT_TO_LOG,editLog.text.toString())
+                        putExtra(TEXT_TO_PASS,editPass.text.toString())
+                    })
                 }
                 textView.visibility = View.INVISIBLE
                 textLogin.visibility = View.VISIBLE
@@ -53,6 +56,14 @@ class Registry : AppCompatActivity() {
 
 
     }
+
+    companion object{
+        val TEXT_TO_LOG: String = "Text_To_log"
+        val TEXT_TO_PASS: String = "Text_To_Pass"
+
+    }
+
+
 
 
 }
