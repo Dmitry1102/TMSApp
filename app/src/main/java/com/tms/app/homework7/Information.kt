@@ -5,24 +5,28 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.tms.app.R
+import com.tms.app.databinding.ActivityMainBinding
+import com.tms.app.databinding.ActivityTimerInfoBinding
 
 class Information: AppCompatActivity() {
 
-    lateinit var text1:TextView
-     lateinit var text2:TextView
+
+    private lateinit var  binding: ActivityTimerInfoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_timer_info)
-
-        text1 = findViewById(R.id.info_log)
-        text2 = findViewById(R.id.info_pass)
+        binding = ActivityTimerInfoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val textlog = intent.extras?.getString(Registry.TEXT_TO_LOG)
         val textPass = intent.extras?.getString(Registry.TEXT_TO_PASS)
 
-        text1.text = textlog
-        text2.text = textPass
+        binding.infoLog.text = textlog
+        binding.infoPass.text = textPass
+
+        binding.button2.setOnClickListener(){
+            finish()
+        }
 
     }
 }

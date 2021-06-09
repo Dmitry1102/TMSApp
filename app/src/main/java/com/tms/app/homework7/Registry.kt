@@ -1,5 +1,6 @@
 package com.tms.app.homework7
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -7,63 +8,63 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewbinding.ViewBinding
 import com.tms.app.R
+import com.tms.app.databinding.ActivityMainBinding
+import com.tms.app.databinding.ActivityTimerBinding
+import kotlin.properties.Delegates
 
 class Registry : AppCompatActivity() {
+    private lateinit var binding: ActivityTimerBinding
+    private var convert by Delegates.notNull<Int>()
 
-    private lateinit var click:Button
-    private lateinit var textView: TextView
-    private lateinit var textLogin: TextView
-    private lateinit var textPass: TextView
-    lateinit var editLog: EditText
-    lateinit var editPass: EditText
-
-
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_timer)
-        
-        click = findViewById(R.id.timer_button)
-        textView = findViewById(R.id.timer_show)
-        textLogin = findViewById(R.id.log_view)
-        textPass = findViewById(R.id.pass_view)
-        editLog = findViewById(R.id.first_edit)
-        editPass = findViewById(R.id.second_edit)
+        binding = ActivityTimerBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-        click.setOnClickListener(){
-            val count =textView.text.toString()
-            var convert: Int = Integer.parseInt((count))
+        binding.button.setOnClickListener(){
+            convert = Integer.parseInt(binding.timerShow.text.toString())
             if( convert != 0 ){
                 convert--
-                textView.text = convert.toString()
-            }else{
-                click.text = "Enter"
-                click.setOnClickListener(){
-                    startActivity(Intent(this,Information::class.java).apply {
-                        putExtra(TEXT_TO_LOG,editLog.text.toString())
-                        putExtra(TEXT_TO_PASS,editPass.text.toString())
+                binding.timerShow.text = convert.toString()
+            }else {
+                binding.button.text = "Enter"
+                binding.button.setOnClickListener(){
+                    startActivity(Intent(this, Information::class.java).apply{
+                        putExtra(TEXT_TO_LOG, binding.firstEdit.text.toString())
+                        putExtra(TEXT_TO_PASS, binding.secondEdit.text.toString())
                     })
+                binding.timerShow.visibility = View.INVISIBLE
+                binding.logView.visibility = View.VISIBLE
+                binding.passView.visibility = View.VISIBLE
+                binding.firstEdit.visibility = View.VISIBLE
+                binding.secondEdit.visibility = View.VISIBLE
                 }
-                textView.visibility = View.INVISIBLE
-                textLogin.visibility = View.VISIBLE
-                textPass.visibility = View.VISIBLE
-                editLog.visibility = View.VISIBLE
-                editPass.visibility = View.VISIBLE
             }
-
-
         }
 
+        savedInstanceState?.let {
+            convert = it.getInt(SAVE_KEY)
+            binding.timerShow.text = convert.toString()
+        }
 
     }
 
-    companion object{
-        val TEXT_TO_LOG: String = "Text_To_log"
-        val TEXT_TO_PASS: String = "Text_To_Pass"
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(SAVE_KEY, convert)
+        super.onSaveInstanceState(outState)
 
     }
 
+    companion object {
+        const val TEXT_TO_LOG: String = "Text_To_log"
+        const val TEXT_TO_PASS: String = "Text_To_Pass"
+        const val SAVE_KEY: String = "SAVE_KEY"
 
+    }
 
 
 }
