@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
+import com.bumptech.glide.Glide
 import com.tms.app.R
 import com.tms.app.databinding.ActivityMainBinding
 import com.tms.app.databinding.ActivityTimerBinding
@@ -18,7 +19,7 @@ class Registry : AppCompatActivity() {
     private lateinit var binding: ActivityTimerBinding
     private var convert by Delegates.notNull<Int>()
 
-    @SuppressLint("SetTextI18n")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTimerBinding.inflate(layoutInflater)
@@ -27,7 +28,7 @@ class Registry : AppCompatActivity() {
 
         binding.button.setOnClickListener(){
             convert = Integer.parseInt(binding.timerShow.text.toString())
-            if( convert != 0 ){
+            if( convert >= 1 ){
                 convert--
                 binding.timerShow.text = convert.toString()
             }else {
@@ -45,6 +46,7 @@ class Registry : AppCompatActivity() {
                 }
             }
         }
+
 
         savedInstanceState?.let {
             convert = it.getInt(SAVE_KEY)
