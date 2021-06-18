@@ -32,7 +32,7 @@ class Registry : AppCompatActivity() {
                 convert--
                 binding.timerShow.text = convert.toString()
             }else {
-                binding.button.text = "Enter"
+                binding.button.text = getString(R.string.enter)
                 binding.button.setOnClickListener(){
                     startActivity(Intent(this, Information::class.java).apply{
                         putExtra(TEXT_TO_LOG, binding.firstEdit.text.toString())
@@ -47,7 +47,6 @@ class Registry : AppCompatActivity() {
             }
         }
 
-
         savedInstanceState?.let {
             convert = it.getInt(SAVE_KEY)
             binding.timerShow.text = convert.toString()
@@ -58,7 +57,6 @@ class Registry : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putInt(SAVE_KEY, convert)
         super.onSaveInstanceState(outState)
-
     }
 
     companion object {
