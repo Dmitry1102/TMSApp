@@ -11,7 +11,7 @@ class ActivityList : AppCompatActivity() {
 
     private lateinit var binding: ActivityListBinding
     private var code by Delegates.notNull<Int>()
-    private lateinit var listCandy: ArrayList<Candy>
+    private val listCandy: MutableList<Candy> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,7 @@ class ActivityList : AppCompatActivity() {
         setContentView(binding.root)
 
         for (i in 0..300) {
-            when {
+             when {
                 i < 100 -> {
                     listCandy.add(Candy("snickers", buildCode()))
                 }
