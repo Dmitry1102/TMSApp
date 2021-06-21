@@ -19,12 +19,16 @@ class ActivityList : AppCompatActivity() {
         setContentView(binding.root)
 
         for (i in 0..300) {
-            if (i < 100) {
-                listCandy.add(Candy("snickers", buildCode()))
-            } else if (i in 101..199) {
-                listCandy.add(Candy("mars", buildCode()))
-            } else if (i in 201..299) {
-                listCandy.add(Candy("twix", buildCode()))
+            when {
+                i < 100 -> {
+                    listCandy.add(Candy("snickers", buildCode()))
+                }
+                i in 101..199 -> {
+                    listCandy.add(Candy("mars", buildCode()))
+                }
+                i in 201..299 -> {
+                    listCandy.add(Candy("twix", buildCode()))
+                }
             }
 
         }
