@@ -14,9 +14,9 @@ class ActivityListModel(
         super.onCleared()
     }
 
-    fun getSynchronizedData() {
+    fun getSynchronizedData(): MutableList<Candy> {
         val candyBuild = CandyBuild
-        candyLiveData.value = candyBuild.getCandiesList()
+        return candyLiveData.value = candyBuild.getCandiesList()
 
     }
 

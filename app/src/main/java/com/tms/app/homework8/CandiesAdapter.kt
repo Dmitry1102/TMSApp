@@ -48,7 +48,7 @@ class CandiesAdapter(
             bindingView.tvCode.text = item.code.toString()
             if (bindingView.tvCandies.text == "snickers") {
                 Glide
-                    .with(context)
+                    .with()
                     .load("https://i.pinimg.com/236x/3f/31/ef/3f31ef63da2c1652a77a6655a8e67e17.jpg")
                     .into(bindingView.ivBrand)
             } else if (bindingView.tvCandies.text == "mars") {

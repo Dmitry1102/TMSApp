@@ -28,7 +28,7 @@ class ActivityList : AppCompatActivity() {
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.rvCandies.adapter = candiesAdapter
         activityListModel.candyLiveData.observe(
-            this, {candiesAdapter.update(activityListModel.candyLiveData.value)}
+            this, {candiesAdapter.update(activityListModel.getSynchronizedData())}
         )
 
 
