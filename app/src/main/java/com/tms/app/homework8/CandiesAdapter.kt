@@ -48,17 +48,17 @@ class CandiesAdapter(
             bindingView.tvCode.text = item.code.toString()
             if (bindingView.tvCandies.text == "snickers") {
                 Glide
-                    .with()
+                    .with(itemView)
                     .load("https://i.pinimg.com/236x/3f/31/ef/3f31ef63da2c1652a77a6655a8e67e17.jpg")
                     .into(bindingView.ivBrand)
             } else if (bindingView.tvCandies.text == "mars") {
                 Glide
-                    .with()
+                    .with(itemView.context)
                     .load("https://www.confitelia.com/3091-thickbox_default/mars-chocolate-bar-51-g.jpg")
                     .into(bindingView.ivBrand)
             } else if (bindingView.tvCandies.text == "twix") {
                 Glide
-                    .with()
+                    .with(itemView)
                     .load("https://i5.walmartimages.com/asr/34c1cb63-7580-483b-991c-156197ef060f_1.296d81d6a60ef48ced65a00abad5cb61.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff")
                     .into(bindingView.ivBrand)
             }
@@ -69,4 +69,3 @@ class CandiesAdapter(
 }
 
 
-}

@@ -13,7 +13,7 @@ class ActivityList : AppCompatActivity() {
     private lateinit var binding: ActivityListBinding
     private var code by Delegates.notNull<Int>()
     private val activityListModel: ActivityListModel by viewModels()
-    private val candyBuild = CandyBuild
+
 
     private val listCandy: MutableList<Candy> = mutableListOf()
 
@@ -28,7 +28,7 @@ class ActivityList : AppCompatActivity() {
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.rvCandies.adapter = candiesAdapter
         activityListModel.candyLiveData.observe(
-            this, {candiesAdapter.update(activityListModel.getSynchronizedData())}
+            this, {candiesAdapter.update(it)}
         )
 
 

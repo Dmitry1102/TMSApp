@@ -22,7 +22,7 @@ object CandyBuild {
 
         }
 
-
+        return listCandy
     }
 
 }

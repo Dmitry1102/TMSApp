@@ -5,18 +5,21 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class ActivityListModel(
-    private val listCandies: MutableList<Candy> = mutableListOf()
-) : ViewModel() {
+class ActivityListModel() : ViewModel() {
+
+    init {
+        getSynchronizedData()
+    }
+
      val candyLiveData: MutableLiveData<MutableList<Candy>> = MutableLiveData()
 
     override fun onCleared() {
         super.onCleared()
     }
 
-    fun getSynchronizedData(): MutableList<Candy> {
+    fun getSynchronizedData() {
         val candyBuild = CandyBuild
-        return candyLiveData.value = candyBuild.getCandiesList()
+        candyLiveData.value = candyBuild.getCandiesList()
 
     }
 
