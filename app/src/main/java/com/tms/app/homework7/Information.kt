@@ -24,6 +24,7 @@ class Information : AppCompatActivity() {
             .with(this)
             .load("https://images.unsplash.com/photo-1544717455-4cf7ad978978?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHw%3D&w=1000&q=80")
             .into(binding.imageView)
+            
 
         binding.button2.setOnClickListener() {
             finish()
