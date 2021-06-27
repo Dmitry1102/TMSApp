@@ -1,4 +1,3 @@
-
 package com.tms.app.homework8
 
 import android.util.Log
@@ -7,11 +6,11 @@ import androidx.lifecycle.ViewModel
 
 class ActivityListModel() : ViewModel() {
 
+    val candyLiveData: MutableLiveData<MutableList<Candy>> = MutableLiveData()
+
     init {
         getSynchronizedData()
     }
-
-     val candyLiveData: MutableLiveData<MutableList<Candy>> = MutableLiveData()
 
     override fun onCleared() {
         super.onCleared()
@@ -22,14 +21,6 @@ class ActivityListModel() : ViewModel() {
         candyLiveData.value = candyBuild.getCandiesList()
 
     }
-
-
-
-
-
-
-
-
 
 
 }

@@ -1,9 +1,12 @@
 package com.tms.app.homework8
 
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.tms.app.R
 import com.tms.app.databinding.ActivityListBinding
 import kotlin.properties.Delegates
 import kotlin.random.Random
@@ -13,10 +16,7 @@ class ActivityList : AppCompatActivity() {
     private lateinit var binding: ActivityListBinding
     private var code by Delegates.notNull<Int>()
     private val activityListModel: ActivityListModel by viewModels()
-
-
     private val listCandy: MutableList<Candy> = mutableListOf()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,14 +24,14 @@ class ActivityList : AppCompatActivity() {
         setContentView(binding.root)
         val candiesAdapter = CandiesAdapter(listCandy)
 
+
+
         binding.rvCandies.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.rvCandies.adapter = candiesAdapter
         activityListModel.candyLiveData.observe(
-            this, {candiesAdapter.update(it)}
+            this, { candiesAdapter.update(it) }
         )
-
-
     }
 
     fun buildCode(): Int {

@@ -1,6 +1,5 @@
 package com.tms.app.homework8
 
-import android.util.Log
 
 object CandyBuild {
     private val listCandy: MutableList<Candy> = mutableListOf()
@@ -12,16 +11,15 @@ object CandyBuild {
                 i < 100 -> {
                     listCandy.add(Candy("snickers", activityList.buildCode()))
                 }
-                i in 101..199 -> {
+                i in 101..200 -> {
                     listCandy.add(Candy("mars", activityList.buildCode()))
                 }
-                i in 201..299 -> {
+                i in 201..300 -> {
                     listCandy.add(Candy("twix", activityList.buildCode()))
                 }
             }
 
         }
-
         return listCandy
     }
 

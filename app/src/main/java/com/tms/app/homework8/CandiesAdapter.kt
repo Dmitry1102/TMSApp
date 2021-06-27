@@ -1,47 +1,39 @@
 package com.tms.app.homework8
 
-import android.content.Context
-import android.util.Log
+
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.tms.app.R
 import com.tms.app.databinding.ItemCandiesBinding
-import kotlin.coroutines.coroutineContext
 
 class CandiesAdapter(
     private val candyList: MutableList<Candy>
 ) : RecyclerView.Adapter<CandiesAdapter.CandiesViewHolder>() {
+
+    override fun getItemCount(): Int {
+        return candyList.size
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CandiesViewHolder {
-        val binding = ItemCandiesBinding.inflate(LayoutInflater.from(parent.context))
+        val binding = ItemCandiesBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return CandiesViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: CandiesViewHolder, position: Int) {
         holder.bind(candyList[position])
-
     }
 
-    override fun getItemCount(): Int {
-        return candyList.size
-
-    }
 
     fun update(candies: MutableList<Candy>) {
         candyList.clear()
         candyList.addAll(candies)
         notifyDataSetChanged()
-
     }
-
 
     class CandiesViewHolder(
         private val bindingView: ItemCandiesBinding
     ) : RecyclerView.ViewHolder(bindingView.root) {
-
 
         fun bind(item: Candy) {
             bindingView.tvCandies.text = item.brand
