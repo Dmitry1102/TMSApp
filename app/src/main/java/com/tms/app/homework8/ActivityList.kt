@@ -6,7 +6,7 @@ import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.tms.app.R
+
 import com.tms.app.databinding.ActivityListBinding
 import kotlin.properties.Delegates
 import kotlin.random.Random

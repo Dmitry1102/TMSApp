@@ -12,6 +12,7 @@
     <string name="Homework6"> homework 6 </string>
     <string name="Homework7"> homework 7 </string>
     <string name="Homework8"> homework 8 </string>
+    <string name="Homework9"> homework 9 </string>
     <string name="click"> Click </string>
     <string name="close"> Close </string>
     <string name="login">Login</string>
@@ -20,4 +21,7 @@
     <string name="info"> Your private information </string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="change_color">Change Color</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
