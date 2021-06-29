@@ -22,14 +22,10 @@ class FragmentActivity:AppCompatActivity() {
         binding = ColorChangeActvityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val firstChange = supportFragmentManager.beginTransaction().apply {
-            replace(R.id.main_fragment, firstFragment)
-            commit()
-        }
 
         binding.buttonChange.setOnClickListener(
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.main_fragment, firstFragment)
+                replace(binding.mainFragment.id, firstFragment,FirstFragment.TAG)
                 commit()
             }
 
