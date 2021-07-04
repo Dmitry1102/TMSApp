@@ -1,9 +1,11 @@
 package com.tms.app.homework10
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.tms.app.databinding.ActivityCandyListBinding
 import com.tms.app.databinding.FragmentFirstBinding
+import com.tms.app.homework10.AdditionalFragment.Companion.PREF_INFO
 import kotlin.random.Random
 
 class GeneralActivity: AppCompatActivity() {
@@ -17,6 +19,10 @@ class GeneralActivity: AppCompatActivity() {
         binding = ActivityCandyListBinding.inflate(layoutInflater)
         setContentView(binding.root)
         var mainFragment = MainFragment()
+
+        val shared = getSharedPreferences(PREF_INFO, MODE_PRIVATE)
+
+
 
         supportFragmentManager.beginTransaction().add(
             binding.fragmentMain.id, mainFragment, FRAGMENT_TAG ).commit()

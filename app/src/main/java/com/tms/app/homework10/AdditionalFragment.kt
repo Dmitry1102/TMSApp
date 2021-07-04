@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.tms.app.R
@@ -25,19 +26,37 @@ class AdditionalFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val serializable = arguments?.getSerializable(CANDY_KEY) as? Candy
+
+        val animation = AnimationUtils.loadAnimation(this.context, R.anim.animation_candy).apply {
+            repeatCount = 5
+        }
+        binding!!.ivCandy.setOnClickListener{
+            binding!!.ivCandy.startAnimation(animation)
+        }
+
+
         with(serializable) {
+            SharedPrefsUtils.putBrand(CANDY_KEY, this!!.brand)
+            SharedPrefsUtils.putCode(CANDY_KEY,this!!.code)
             binding?.let {
                 it.tvBrand.text = this?.brand
                 it.tvCode.text = this?.code.toString()
-                if (binding!!.tvBrand.text == GeneralActivity.SNICKERS) {
-                    Glide.with(it.root).load(getString(R.string.snickers_image)).into(it.ivCandy)
-                } else if (binding!!.tvBrand.text == GeneralActivity.MARS) {
-                    Glide.with(it.root).load(getString(R.string.mars_image)).into(it.ivCandy)
-                } else {
-                    Glide.with(it.root).load(getString(R.string.twix_image)).into(it.ivCandy)
+                when (binding!!.tvBrand.text) {
+                    GeneralActivity.SNICKERS -> {
+                        Glide.with(it.root).load(getString(R.string.snickers_image)).into(it.ivCandy)
+                    }
+                    GeneralActivity.MARS -> {
+                        Glide.with(it.root).load(getString(R.string.mars_image)).into(it.ivCandy)
+                    }
+                    else -> {
+                        Glide.with(it.root).load(getString(R.string.twix_image)).into(it.ivCandy)
+                    }
                 }
             }
+
         }
+
+
     }
 
     override fun onDestroyView() {
@@ -51,6 +70,7 @@ class AdditionalFragment : Fragment() {
 
     companion object {
         private const val CANDY_KEY = "CANDY_KEY"
+        const val PREF_INFO = "PREF_INFO"
 
         fun newInstace(candy: Candy) = AdditionalFragment().apply {
             val bundle = Bundle()
