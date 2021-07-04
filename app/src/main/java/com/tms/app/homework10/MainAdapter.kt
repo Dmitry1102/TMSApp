@@ -24,4 +24,10 @@ class MainAdapter(
         return candyList.size
     }
 
+    fun update(candy: MutableList<Candy>) {
+        candyList.clear()
+        candyList.addAll(candy)
+        notifyDataSetChanged()
+    }
+
 }

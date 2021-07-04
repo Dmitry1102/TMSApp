@@ -17,6 +17,8 @@ class GeneralActivity: AppCompatActivity() {
     }
 
 
+
+
     companion object{
         const val TWIX = "Twix"
         const val SNICKERS = "Snickers"

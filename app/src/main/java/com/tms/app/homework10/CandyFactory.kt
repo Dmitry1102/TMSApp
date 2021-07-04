@@ -1,7 +1,6 @@
 package com.tms.app.homework10
 
-import com.tms.app.homework8.ActivityList
-import com.tms.app.homework8.Candy
+
 
 object CandyFactory {
     private val listCandy: MutableList<Candy> = mutableListOf()
