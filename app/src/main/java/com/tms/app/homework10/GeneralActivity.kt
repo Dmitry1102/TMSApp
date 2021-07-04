@@ -10,10 +10,25 @@ class GeneralActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityCandyListBinding
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCandyListBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        var mainFragment = MainFragment()
+
+        supportFragmentManager.beginTransaction().add(
+            binding.fragmentMain.id, mainFragment, FRAGMENT_TAG ).commit()
+
+    }
+
+    fun openAdditionalFragment(candy: Candy){
+        var additionalFragment = AdditionalFragment
+        supportFragmentManager.beginTransaction().replace(
+            binding.fragmentMain.id, additionalFragment.newInstace(candy), FRAGMENT_TAG
+        ).addToBackStack(null).commit()
+
     }
 
 
@@ -23,6 +38,9 @@ class GeneralActivity: AppCompatActivity() {
         const val TWIX = "Twix"
         const val SNICKERS = "Snickers"
         const val MARS = "Mars"
+        const val FRAGMENT_TAG = "FRAGMENT_TAG"
+        const val ADDITIONAL_FRAGMENT_TAG = "ADDITIONAL_FRAGMENT_TAG"
+
 
         fun buildCode(): Int {
             val code = Random.nextInt(10000000, 99999999)

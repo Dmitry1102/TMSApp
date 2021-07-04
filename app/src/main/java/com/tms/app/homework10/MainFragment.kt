@@ -7,14 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.tms.app.R
 import com.tms.app.databinding.FragmentCandyListBinding
-import com.tms.app.databinding.ItemCandyListBinding
 
 class MainFragment: Fragment() {
 
     private var binding: FragmentCandyListBinding? = null
-    private val viewModel by viewModels<MainModel>()
+    private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,9 +25,8 @@ class MainFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-       val onClick: (candy : Candy) -> Unit = {
-            parentFragmentManager.beginTransaction()
-                .replace(binding!!.rvCandy.id,AdditionalFragment.newInstace(it),null).commit()
+        val onClick: (candy : Candy) -> Unit = {
+            (activity as? GeneralActivity)?.openAdditionalFragment(it)
         }
         val adapter = MainAdapter(mutableListOf(),onClick)
         binding?.rvCandy?.layoutManager = LinearLayoutManager(binding?.root?.context, LinearLayoutManager.VERTICAL, false)
@@ -42,8 +39,5 @@ class MainFragment: Fragment() {
         super.onDestroyView()
         binding = null
     }
-
-
-
 
 }

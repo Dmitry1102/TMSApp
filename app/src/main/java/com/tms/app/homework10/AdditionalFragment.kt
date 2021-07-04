@@ -24,10 +24,11 @@ class AdditionalFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        with(arguments?.getSerializable(CANDY_KEY) as Candy) {
+        val serializable = arguments?.getSerializable(CANDY_KEY) as? Candy
+        with(serializable) {
             binding?.let {
-                it.tvBrand.text = this.brand
-                it.tvCode.text = this.code.toString()
+                it.tvBrand.text = this?.brand
+                it.tvCode.text = this?.code.toString()
                 if (binding!!.tvBrand.text == GeneralActivity.SNICKERS) {
                     Glide.with(it.root).load(getString(R.string.snickers_image)).into(it.ivCandy)
                 } else if (binding!!.tvBrand.text == GeneralActivity.MARS) {
@@ -43,6 +44,8 @@ class AdditionalFragment : Fragment() {
         super.onDestroyView()
         binding = null
     }
+
+
 
 
 

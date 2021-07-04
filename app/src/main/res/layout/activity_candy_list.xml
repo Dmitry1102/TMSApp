@@ -22,6 +22,7 @@
         app:layout_constraintVertical_bias="0.164" />
 
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_main"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:background="@color/white"
