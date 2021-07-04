@@ -13,6 +13,7 @@
     <string name="Homework7"> homework 7 </string>
     <string name="Homework8"> homework 8 </string>
     <string name="Homework9"> homework 9 </string>
+    <string name="Homework10"> homework 10 </string>
     <string name="click"> Click </string>
     <string name="close"> Close </string>
     <string name="login">Login</string>
@@ -23,6 +24,11 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="change_color">Change Color</string>
     <string name="list_of"> List of Candies</string>
+    <string name="snickers_image">https://i.pinimg.com/236x/3f/31/ef/3f31ef63da2c1652a77a6655a8e67e17.jpg</string>
+    <string name="mars_image">https://www.confitelia.com/3091-thickbox_default/mars-chocolate-bar-51-g.jpg</string>
+    <string name="twix_image">https://www.delikatesy.bochnia.pl/userdata/public/gfx/6324/Baton-Twix-Mars-50-g.jpg</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

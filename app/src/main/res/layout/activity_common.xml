@@ -5,44 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/homework_2"
-        android:layout_width="183dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="28dp"
-        android:background="@color/purple_700"
-        android:text="@string/Homework2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/homework_4"
-        android:layout_width="183dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="216dp"
-        android:background="@color/purple_700"
-        android:text="@string/Homework4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/homework_3"
-        android:layout_width="183dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="120dp"
-        android:background="@color/purple_700"
-        android:text="@string/Homework3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/homework_6"
         android:layout_width="183dp"
         android:layout_height="61dp"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="32dp"
         android:background="@color/purple_700"
         android:text="@string/Homework6"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +21,7 @@
         android:id="@+id/homework_7"
         android:layout_width="183dp"
         android:layout_height="61dp"
-        android:layout_marginTop="404dp"
+        android:layout_marginTop="128dp"
         android:background="@color/purple_700"
         android:text="@string/Homework7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +32,7 @@
         android:id="@+id/homework_8"
         android:layout_width="183dp"
         android:layout_height="61dp"
-        android:layout_marginTop="504dp"
+        android:layout_marginTop="228dp"
         android:background="@color/purple_700"
         android:text="@string/Homework8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,9 +43,20 @@
         android:id="@+id/homework_9"
         android:layout_width="183dp"
         android:layout_height="61dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="332dp"
         android:background="@color/purple_700"
         android:text="@string/Homework9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homework_10"
+        android:layout_width="183dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="440dp"
+        android:background="@color/purple_700"
+        android:text="@string/Homework10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -23,14 +23,14 @@ class FragmentActivity:AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.buttonChange.setOnClickListener(
-            supportFragmentManager.beginTransaction().apply {
-                replace(binding.mainFragment.id, firstFragment,FirstFragment.TAG)
-                commit()
-            }
-
-
-        )
+//        binding.buttonChange.setOnClickListener(
+//            supportFragmentManager.beginTransaction().apply {
+//                replace(binding.mainFragment.id, firstFragment,FirstFragment.TAG)
+//                commit()
+//            }
+//
+//
+//        )
 
     }
 }
