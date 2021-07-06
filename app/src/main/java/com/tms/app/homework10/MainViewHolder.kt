@@ -11,6 +11,8 @@ class MainViewHolder(
 {
     fun bind(item: Candy){
         itemView.setOnClickListener{
+            SharedPrefsUtils.putBrand(AdditionalFragment.CANDY_KEY, item.brand)
+            SharedPrefsUtils.putCode(AdditionalFragment.CANDY_KEY,item.code)
             onClick(item)
         }
         binding.tvCodes.text = item.code.toString()

@@ -12,17 +12,16 @@ class GeneralActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityCandyListBinding
 
-
+    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCandyListBinding.inflate(layoutInflater)
         setContentView(binding.root)
         var mainFragment = MainFragment()
-
-        val shared = getSharedPreferences(PREF_INFO, MODE_PRIVATE)
-
-
+        val sharedPreferences = getSharedPreferences(PREF_INFO, MODE_PRIVATE)
+        val openBrand = sharedPreferences.getString(PREF_INFO,"No Preferences")
+        val openCode = sharedPreferences.getInt(PREF_INFO,0)
 
         supportFragmentManager.beginTransaction().add(
             binding.fragmentMain.id, mainFragment, FRAGMENT_TAG ).commit()
@@ -45,7 +44,7 @@ class GeneralActivity: AppCompatActivity() {
         const val SNICKERS = "Snickers"
         const val MARS = "Mars"
         const val FRAGMENT_TAG = "FRAGMENT_TAG"
-        const val ADDITIONAL_FRAGMENT_TAG = "ADDITIONAL_FRAGMENT_TAG"
+
 
 
         fun buildCode(): Int {

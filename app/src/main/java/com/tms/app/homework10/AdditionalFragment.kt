@@ -13,6 +13,7 @@ import com.tms.app.databinding.FragmentAdditionalCandyBinding
 class AdditionalFragment : Fragment() {
 
     private var binding: FragmentAdditionalCandyBinding? = null
+    val generalActivity = GeneralActivity
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +27,6 @@ class AdditionalFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val serializable = arguments?.getSerializable(CANDY_KEY) as? Candy
-
         val animation = AnimationUtils.loadAnimation(this.context, R.anim.animation_candy).apply {
             repeatCount = 5
         }
@@ -36,8 +36,6 @@ class AdditionalFragment : Fragment() {
 
 
         with(serializable) {
-            SharedPrefsUtils.putBrand(CANDY_KEY, this!!.brand)
-            SharedPrefsUtils.putCode(CANDY_KEY,this!!.code)
             binding?.let {
                 it.tvBrand.text = this?.brand
                 it.tvCode.text = this?.code.toString()
@@ -53,10 +51,7 @@ class AdditionalFragment : Fragment() {
                     }
                 }
             }
-
         }
-
-
     }
 
     override fun onDestroyView() {
@@ -64,12 +59,9 @@ class AdditionalFragment : Fragment() {
         binding = null
     }
 
-
-
-
-
     companion object {
-        private const val CANDY_KEY = "CANDY_KEY"
+        const val CANDY_KEY = "CANDY_KEY"
+        const val CANDY_OPEN_KEY = "CANDY_OPEN_KEY"
         const val PREF_INFO = "PREF_INFO"
 
         fun newInstace(candy: Candy) = AdditionalFragment().apply {
@@ -77,6 +69,7 @@ class AdditionalFragment : Fragment() {
             bundle.putSerializable(CANDY_KEY, candy)
             this.arguments = bundle
         }
+
 
     }
 
