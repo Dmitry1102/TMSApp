@@ -33,6 +33,10 @@ class Main : AppCompatActivity() {
             dataViewModel.showMessage()
         }
 
+        binding.btnDelMes.setOnClickListener{
+            dataViewModel.deleteMes()
+        }
+
         dataViewModel.getMessage(binding.etWrite.text.toString())
 
         binding.rvShowMes.layoutManager=

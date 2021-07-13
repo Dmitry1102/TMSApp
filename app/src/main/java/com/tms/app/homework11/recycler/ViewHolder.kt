@@ -13,4 +13,9 @@ class ViewHolder(
         binding.tvMessage.text = data.message
         binding.tvMessage.text = data.date
     }
+
+    fun delMessage(data: Data){
+        val delData = (data as? DataEntity)
+
+    }
 }

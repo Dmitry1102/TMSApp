@@ -26,6 +26,20 @@ class DataViewModel(
         }
 
     }
+
+    fun deleteMes(){
+        val trashData = DataEntity(
+            id = iterator++,
+            message = messageMain,
+            date = System.currentTimeMillis().toString()
+        )
+        viewModelScope.launch(Dispatchers.Main) {
+            dao.deleteData(trashData)
+        }
+
+    }
+
+
     fun getMessage(message: String):String{
         messageMain = message
         return messageMain
