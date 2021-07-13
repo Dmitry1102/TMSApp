@@ -28,6 +28,7 @@
         <activity android:name=".homework7.Information"/>
         <activity android:name=".homework8.ActivityList"/>
         <activity android:name=".homework10.GeneralActivity"/>
+        <activity android:name=".homework11.Main"/>
     </application>
 
 </manifest>

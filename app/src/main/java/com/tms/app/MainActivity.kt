@@ -43,6 +43,10 @@ class MainActivity : AppCompatActivity() {
            startActivity(Intent(this, GeneralActivity::class.java))
        }
 
+       binding.homework11.setOnClickListener{
+           startActivity(Intent(this, Math::class.java))
+       }
+
 
     }
 }
