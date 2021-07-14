@@ -1,4 +1,4 @@
-package com.tms.app.homework11.database
+package com.tms.app.homework16.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

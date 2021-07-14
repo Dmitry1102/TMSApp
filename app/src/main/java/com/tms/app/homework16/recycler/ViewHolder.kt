@@ -1,9 +1,9 @@
-package com.tms.app.homework11.recycler
+package com.tms.app.homework16.recycler
 
 import androidx.recyclerview.widget.RecyclerView
 import com.tms.app.databinding.ItemRecordBinding
-import com.tms.app.homework11.Data
-import com.tms.app.homework11.database.DataEntity
+import com.tms.app.homework16.Data
+import com.tms.app.homework16.database.DataEntity
 
 class ViewHolder(
     private val binding: ItemRecordBinding

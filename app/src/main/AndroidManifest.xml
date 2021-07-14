@@ -27,9 +27,9 @@
         <activity android:name=".homework7.Registry"/>
         <activity android:name=".homework7.Information"/>
         <activity android:name=".homework8.ActivityList"/>
-        <activity android:name=".homework10.GeneralActivity"/>
-        <activity android:name=".homework11.Main"/>
-        <activity android:name=".homework12.Main"/>
+        <activity android:name=".homework13.GeneralActivity"/>
+        <activity android:name=".homework16.Main"/>
+        <activity android:name=".homework17.Main"/>
     </application>
 
 </manifest>

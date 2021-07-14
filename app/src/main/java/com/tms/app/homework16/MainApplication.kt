@@ -1,10 +1,9 @@
-package com.tms.app.homework11
+package com.tms.app.homework16
 
 import android.app.Application
 import androidx.room.Room
-import androidx.room.RoomDatabase
-import com.tms.app.homework11.database.DataBase
-import com.tms.app.homework11.database.DataDao
+import com.tms.app.homework16.database.DataBase
+import com.tms.app.homework16.database.DataDao
 
 class MainApplication: Application() {
 

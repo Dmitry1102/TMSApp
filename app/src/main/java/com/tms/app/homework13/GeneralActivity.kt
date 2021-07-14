@@ -1,13 +1,11 @@
 
 
-package com.tms.app.homework10
+package com.tms.app.homework13
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.tms.app.databinding.ActivityCandyListBinding
-import com.tms.app.databinding.FragmentFirstBinding
-import com.tms.app.homework10.AdditionalFragment.Companion.PREF_INFO
+import com.tms.app.homework13.AdditionalFragment.Companion.PREF_INFO
 import kotlin.random.Random
 
 class GeneralActivity: AppCompatActivity() {

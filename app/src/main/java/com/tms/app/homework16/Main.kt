@@ -1,13 +1,11 @@
-package com.tms.app.homework11
+package com.tms.app.homework16
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tms.app.databinding.ActivityRecordBinding
-import com.tms.app.homework11.database.DataDao
-import com.tms.app.homework11.database.DataEntity
-import com.tms.app.homework11.recycler.Adapter
+import com.tms.app.homework16.recycler.Adapter
 
 class Main : AppCompatActivity() {
     private val application = MainApplication()
