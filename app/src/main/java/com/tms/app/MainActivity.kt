@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
        binding.homework6.setOnClickListener(){
             startActivity(Intent(this, Homework6Activity::class.java))
        }
