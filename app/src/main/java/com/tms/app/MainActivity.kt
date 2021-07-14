@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
        binding.homework6.setOnClickListener(){
             startActivity(Intent(this, Homework6Activity::class.java))
        }
