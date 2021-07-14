@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.tms.app.R
 import com.tms.app.databinding.ActivityCommonBinding
 import com.tms.app.homework10.GeneralActivity
-import com.tms.app.homework11.Main
 import com.tms.app.homework6.Homework6Activity
 import com.tms.app.homework7.Registry
 import com.tms.app.homework8.ActivityList
@@ -45,7 +44,7 @@ class MainActivity : AppCompatActivity() {
        }
 
        binding.homework11.setOnClickListener{
-           startActivity(Intent(this, Main::class.java))
+           startActivity(Intent(this, Math::class.java))
        }
 
 
