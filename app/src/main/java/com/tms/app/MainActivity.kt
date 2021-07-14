@@ -6,12 +6,13 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.tms.app.R
 import com.tms.app.databinding.ActivityCommonBinding
-import com.tms.app.homework10.GeneralActivity
-import com.tms.app.homework11.Main
+
+import com.tms.app.homework11.ActivityList
+import com.tms.app.homework12.FragmentActivity
+import com.tms.app.homework13.GeneralActivity
+import com.tms.app.homework16.Main
 import com.tms.app.homework6.Homework6Activity
 import com.tms.app.homework7.Registry
-import com.tms.app.homework8.ActivityList
-import com.tms.app.homework9.FragmentActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
        }
 
        binding.homework8.setOnClickListener(){
-            startActivity(Intent(this,ActivityList::class.java))
+            startActivity(Intent(this, ActivityList::class.java))
        }
 
        binding.homework9.setOnClickListener(){
