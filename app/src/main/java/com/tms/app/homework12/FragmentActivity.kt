@@ -1,8 +1,7 @@
-package com.tms.app.homework9
+package com.tms.app.homework12
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.tms.app.R
 import com.tms.app.databinding.ColorChangeActvityBinding
 
 class FragmentActivity:AppCompatActivity() {

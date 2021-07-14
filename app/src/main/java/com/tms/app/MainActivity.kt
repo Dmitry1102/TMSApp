@@ -7,8 +7,8 @@ import com.tms.app.databinding.ActivityCommonBinding
 import com.tms.app.homework13.GeneralActivity
 import com.tms.app.homework6.Homework6Activity
 import com.tms.app.homework7.Registry
-import com.tms.app.homework8.ActivityList
-import com.tms.app.homework9.FragmentActivity
+import com.tms.app.homework11.ActivityList
+import com.tms.app.homework12.FragmentActivity
 
 class MainActivity : AppCompatActivity() {
 
